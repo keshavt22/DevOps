@@ -1,4 +1,2 @@
 # devops
-
-
-hi bro 
+here is a project for docker 
