@@ -1,7 +1,7 @@
 node {
     checkout scm
 
-    docker.withRegistry('https://registry.hub.docker.com/', 'kt221') {
+    docker.withRegistry('https://registry.hub.docker.com/', 'devops') {
 
         def customImage = docker.build("kt221/devops2021")
 
