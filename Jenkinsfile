@@ -2,13 +2,13 @@ pipeline {
     environment { 
         registry = "YourDockerhubAccount/YourRepository" 
         registryCredential = 'dockerhub_id' 
-	dockerImage = '' 
+        dockerImage = '' 
     }
     agent any 
     stages { 
         stage('Cloning our Git') { 
             steps { 
-                git 'https://github.com/keshavt22/devops.git' 
+                git 'https://github.com/YourGithubAccount/YourGithubRepository.git' 
             }
         } 
         stage('Building our image') { 
@@ -22,7 +22,8 @@ pipeline {
             steps { 
                 script { 
                     docker.withRegistry( '', registryCredential ) { 
-                        dockerImage.push()                  
+                        dockerImage.push() 
+                    }
                 } 
             }
         } 
@@ -32,5 +33,4 @@ pipeline {
             }
         } 
     }
-}
 }
