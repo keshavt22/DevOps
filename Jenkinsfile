@@ -10,6 +10,12 @@ pipeline {
             steps { 
                 git 'https://github.com/keshavt22/devops.git' 
             }
-        }       
+        } 
+        stage('Building our image') { 
+            steps { 
+                echo "keshav"
+                    } 
+                } 
+        }         
     }
 }
